@@ -1,0 +1,22 @@
+<div class="container">
+    <p class="text text-danger">{{message}}</p>
+    <h4>Login</h4>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Username" name="username" [(ngModel)]="username">
+            </div>
+            <br />
+            <div class="input-group mb-3">
+                <input type="{{showPassword ? 'text' : 'password'}}" class="form-control" placeholder="Password" id="password"aria-describedby="basic-addon2" name="password" [(ngModel)]="password">
+                <div class="input-group-append">
+                  <button (click)="onShowPass()" class="btn btn-outline-secondary" type="button">
+                      <fa-icon *ngIf="!showPassword" [icon]="faEyeSlash"></fa-icon>
+                      <fa-icon *ngIf="showPassword" [icon]="faEye"></fa-icon>
+                </button>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button> 
+        </div>
+    </form>
+</div>

@@ -1,0 +1,12 @@
+.nav-root {
+    background-color: #262326;
+    color: #fff;
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 8px;
+}
+
